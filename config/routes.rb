@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :subastas
-  resources :homes
-  get 'adm',to: 'adm#index'
-  root 'main#index'
+  resources :adms
+  #get 'adm',to: 'adm#index'
+  #root 'main#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181111165533) do
+ActiveRecord::Schema.define(version: 20181112182012) do
 
   create_table "adms", force: :cascade do |t|
     t.string "nombre"
     t.string "ubicacion"
     t.integer "canthabitaciones"
+    t.boolean "disponibilidad"
+    t.text "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string "nombre"
+    t.string "ubicacion"
+    t.integer "cant_habitaciones"
     t.boolean "disponibilidad"
     t.text "descripcion"
     t.datetime "created_at", null: false

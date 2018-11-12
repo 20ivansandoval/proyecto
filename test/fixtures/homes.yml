@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  ubicacion: MyString
+  cant_habitaciones: 1
+  disponibilidad: false
+  descripcion: MyText
+
+two:
+  nombre: MyString
+  ubicacion: MyString
+  cant_habitaciones: 1
+  disponibilidad: false
+  descripcion: MyText

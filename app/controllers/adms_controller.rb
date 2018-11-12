@@ -1,20 +1,20 @@
 class AdmsController < ApplicationController
   def edit
-    @home=Adm.find(params[:id])  
+    @home=Home.find(params[:id])  
   end
   def update
-    @home=Adm.find(params[:id])
-     if @home.update(params.require(:adm).permit(:nombre))
+    @home=Home.find(params[:id])
+     if @home.update(params.require(:home).permit(:nombre))
       redirect_to adms_path
      else
     render :edit
   end 
   end
   def new 
-    @home=Adm.new
+    @home=Home.new
   end
   def create
-  @home=Adm.new(params.require(:adm).permit(:nombre,:ubicacion,:disponibilidad))
+  @home=Home.new(params.require(:home).permit(:nombre,:ubicacion,:disponibilidad))
   if @home.save
     redirect_to adms_path
   else
@@ -27,13 +27,13 @@ class AdmsController < ApplicationController
   end
   
   def index
-     @homes=Adm.all
+     @homes=Home.all
   end
 
   def show
   end
   def destroy
-  @home=Adm.find(params[:id])
+  @home=Home.find(params[:id])
     if @home.destroy
     redirect_to adms_path
   else
